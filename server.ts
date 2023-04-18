@@ -1,8 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
+import { postRouter } from "./resources/posts/post-router";
 
 const app = express();
 app.use(express.json());
+app.use(postRouter);
+// app.use(userRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json("Hello world");
