@@ -2,5 +2,15 @@
 GET http://localhost:3000
 
 
-### POSTS
+### GET POSTS
 GET http://localhost:3000/api/posts
+
+
+### CREATE POST
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+    "title" : "Hello Friends",
+    "content" : "This is a secret message!"
+}

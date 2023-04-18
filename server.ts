@@ -5,7 +5,10 @@ import { postRouter } from "./resources/posts/post-router";
 
 const app = express();
 
+// GLOBAL MIDDLEWARES
 app.use(express.json());
+
+// ROUTERS
 app.use(postRouter);
 // app.use(userRouter);
 
@@ -14,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017");
+  await mongoose.connect("mongodb://127.0.0.1:27017/twitter");
   console.log("Connected to Database");
 
   app.listen(3000, () =>
