@@ -1,2 +1,6 @@
 ### HOME
 GET http://localhost:3000
+
+
+### POSTS
+GET http://localhost:3000/api/posts
